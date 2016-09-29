@@ -33,7 +33,7 @@
     <!-- Start Body -->
     <body>
     <span id="totop"></span>
-    
+   
         <!-- Start Page -->
         <div id="page">
 
@@ -51,11 +51,11 @@
 
             </header>
             <!-- End Header -->
-            
+           
             <!-- Start Nav -->  
             <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <h3>Site Navigation</h3>
-                    <ul>
+                    <ul class="mainNav" id="myMainNav">
                         <!-- Start Site Navigation List -->
                         <!-- TemplateBeginEditable name="SiteNavigationList" -->
                         <li itemprop="name" class="active"><a itemprop="url" href="../mainpage.html"><span itemprop="name">Home</span></a></li>
@@ -63,6 +63,7 @@
                         <li itemprop="name"><a itemprop="url" href="../reviews.html"><span itemprop="name">Reviews</span></a></li>
                         <li itemprop="name"><a itemprop="url" href="../contactus.html"><span itemprop="name">Contact Us</span></a></li>
                         <!-- TemplateEndEditable -->
+                        <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
                         <!-- End Site Navigation List -->
                     </ul>                
             </nav> 
@@ -202,6 +203,7 @@
         <!-- End Page -->
         
         <!-- Start Bottom of Page Scripts -->
+        <script src="footer-scripts/myft-scripts.js"></script>
         <!-- TemplateBeginEditable name="BottomofPageScripts" -->
         
         <!-- TemplateEndEditable -->

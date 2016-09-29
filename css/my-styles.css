@@ -9,7 +9,7 @@ body {
 /* Start Page */
 #page {
 	font: 100% Georgia, "Times New Roman", Times, serif;
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 50px;
     text-align: left;
@@ -87,6 +87,35 @@ nav ul li a:hover {
 	color:#FFF;
 	cursor:default;
 }
+/* Remove margins and padding from the list, and add a black background color */
+ul.mainNav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Float the list items side by side */
+ul.mainNav li {float: left;}
+
+/* Style the links inside the list items */
+ul.mainNav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.mainNav li a:hover {background-color: #0C3;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.mainNav li.icon {display: none;}
+
 /* End Nav */          
 
 /* Start Main */
@@ -95,10 +124,25 @@ main {
 }
 main.main-article {
 	float: left;
-	width: 59%;
+	width: 60%;
 	border-right: 1px solid #7f7f7f;
 	padding: 0 10px 0 25px;
 	margin-bottom: 2em;
+}
+
+main.main-article img {
+	max-width:100%;
+	height:auto;
+}
+
+main.main-article video {
+	max-width:100%;
+	height:auto;
+}
+div.video {
+	float:none;
+	text-align:center;
+	margin:10px auto;
 }
 /* End Main */
 
@@ -110,9 +154,29 @@ article {
 article.article-section {
 	float: right;
 	clear: right;
-	width: 35%;
+	width: 33%;
 	padding: 0 10px 0 10px;
 	margin-bottom: 0;
+}
+article.article-section img {
+	max-width:80%;
+	height:auto;
+}
+article.article-section video {
+	max-width:100%;
+	height:auto;
+	text-align:center;
+}
+div.audio {
+	float:none;
+	text-align:center;
+	margin:10px auto;
+}
+footer span.author {
+	font-style:normal;
+}
+footer span.website-url {
+	font-style:normal;
 }
 /* End Article */
 
@@ -219,3 +283,190 @@ div.form-submit-reset {
 }
 /* End Fan Form */
 
+
+/* Start Media Queries */
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.mainNav li:not(:first-child) {display: none;}
+  ul.mainNav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.mainNav.responsive {position: relative;}
+  ul.mainNav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.mainNav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.mainNav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+@media screen and (max-width:899px) {  
+#page {
+	max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: left;
+    position:  relative;
+    background: white;
+}
+header {
+	float: left;
+	width: 100%;
+	clear:both;
+	height:auto;
+	background: url(../images/Faithful-Fruit-Factory-Logo-02-w135.png) no-repeat;
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 2px solid #7f7f7f;
+    margin-bottom: 1em;
+	overflow:hidden;
+}  
+.h1-header {
+	float:right;
+	clear:both;
+	text-align:center;
+}
+nav {
+	float:left;
+	clear:both;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+main.main-article {
+	float: left;
+	width: 100%;
+	clear:both;
+	border-right: none;/* 1px solid #7f7f7f;*/
+	padding: 0 0 0 2px;
+	margin-bottom: 2em;
+}
+/* End Main */
+
+article.article-section {
+	float: left;
+	clear: both;
+	width: 100%;
+	padding: 0 10px 0 10px;
+	margin-bottom: 0;
+}
+}
+@media screen and (max-width: 680px) and (min-width: 321px) {
+#page {
+	max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: left;
+    position:  relative;
+    background: white;
+}
+header {
+	float: left;
+	width: 100%;
+	clear:both;
+	height:auto;
+	background: url(../images/Faithful-Fruit-Factory-Logo-02-w135.png) no-repeat;
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 2px solid #7f7f7f;
+    margin-bottom: 1em;
+	overflow:hidden;
+}  
+.h1-header {
+	float:right;
+	clear:both;
+	text-align:center;
+}
+nav {
+	float:left;
+	clear:both;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+main.main-article {
+	float: left;
+	width: 100%;
+	clear:both;
+	border-right: none;/* 1px solid #7f7f7f;*/
+	padding: 0 0 0 2px;
+	margin-bottom: 2em;
+}
+/* End Main */
+
+article.article-section {
+	float: left;
+	clear: both;
+	width: 100%;
+	padding: 0 10px 0 10px;
+	margin-bottom: 0;
+}
+}
+@media screen and (max-width:320px) {  
+
+#page {
+	min-width: 320px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: left;
+    position:  relative;
+    background: white;
+}
+header {
+	float: left;
+	width: 97%;
+	clear:both;
+	height:auto;
+	background: url(../images/Faithful-Fruit-Factory-Logo-02-w135.png) no-repeat;
+    padding: 0;
+    position: relative;
+    border-bottom: 2px solid #7f7f7f;
+    margin-bottom: 1em;
+	overflow:hidden;
+}  
+.h1-header {
+	float:right;
+	clear:both;
+	text-align:center;
+}	
+nav {
+	float:left;
+	clear:both;
+	width:97%;
+	height:auto;
+	overflow:hidden;
+}
+main.main-article {
+	float: left;
+	width: 97%;
+	clear:both;
+	border-right: none;/* 1px solid #7f7f7f;*/
+	padding: 0;
+	margin-bottom: 2em;
+}
+/* End Main */
+
+article.article-section {
+	float: left;
+	clear: both;
+	width: 97%;
+	padding: 0;
+	margin-bottom: 0;
+}
+footer {
+	width: 97%;
+}
+
+}
